@@ -1,0 +1,29 @@
+{
+  "name": "team-hack",
+  "version": "1.0.0",
+  "description": "Online editor for collaboration.",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rrkas/team-hack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rrkas/team-hack/issues"
+  },
+  "homepage": "https://github.com/rrkas/team-hack#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "socket.io": "^4.1.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
