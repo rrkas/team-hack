@@ -7,3 +7,4 @@ $ touch server.js
 
 terminal 1 $ peerjs --port 3001
 terminal 2 $ npm run devStart
+terminal 2 $ npm run devStart
