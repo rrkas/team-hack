@@ -1,0 +1,22 @@
+
+.navbar>img
+{
+    width:4%;
+    height: 4%;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    background: blue;
+    color: white;
+    font-family: Helvetica;
+    font-weight: 300;
+    box-shadow: 0 0 10px black;
+}
+
+.navbar__title {
+    margin-right: auto;
+    font-size: 150%;
+    padding: 12px 16px;
+}
+

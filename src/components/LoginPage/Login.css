@@ -1,0 +1,51 @@
+.container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    top: 20%;
+    left: 25%;
+    box-shadow: 0 0 10px;
+  }
+  img {
+    width: 50%;
+  }
+  .border {
+    display: flex;
+    flex-direction: row;
+  }
+  .header > h3 {
+    color: grey;
+    margin-top: 0px;
+  }
+  .header > h1 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    font-weight: bold;
+    width: 200px;
+    margin: 0px 0px;
+    padding: 6px 15px;
+    height: 35px;
+    border-radius: 5px;
+    outline: none;
+    border: 1.5px solid grey;
+    font-size: 14px;
+    background-color: white;
+  }
+  button {
+    font-weight: bold;
+    width: 230px;
+    margin: 0px 0px;
+    height: 45px;
+    padding: 6px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: blue;
+    color: white;
+    font-size: 14px;
+  }
+  
