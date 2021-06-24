@@ -33,46 +33,6 @@ socket.on('user-disconnected', userId => {
 myPeer.on('open', id => {
   socket.emit('join-room', ROOM_ID, id)
 })
-
-
-const meassageContainer=document.querySelector('.container')
-const messageInput=document.querySelector('#messageInp')
-const form=document.querySelector('#send-container')
-
-
-const username=prompt("Enter your name to join:");
-
-socket.emit('new-user-joined',username);
-
-
-const appendMessage= (message,position) =>{
-    var msg=document.createElement("div")
-    msg.innerHTML=message
-    msg.classList.add=('message')
-    msg.classList.add=position
-    meassageContainer.append(msg)
-}
-
-form.addEventListener('submit',(event)=>{
-    event.preventDefault();
-    const msg=messageInput.value
-    appendMessage(`You : ${message}`,'right')
-    socket.emit('send',message);
-    messageInput.value=''
-})
-
-
-
-socket.on('user-joined',name=>{
-    appendMessage(`${name} has joined the chat`,'right')
-});
-socket.on('receive',data=>{
-    appendMessage( `${data.name}:${data.message}`,'left')
-});
-socket.on('left',name=>{
-    appendMessage( `${name} left the chat`,'right')
-});
-
 function connectToNewUser(userId, stream) {
   const call = myPeer.call(userId, stream)
   const video = document.createElement('video')
@@ -93,3 +53,38 @@ function addVideoStream(video, stream) {
   })
   videoGrid.append(video)
 }
+
+//ishan's code
+const messageContainer=document.querySelector('.container')
+const messageInput=document.querySelector('#messageInp')
+const form=document.querySelector('#send-container')
+
+const appendMessage= (message,position) =>{
+    const msg=document.createElement("div");
+    msg.innerText=message;
+    msg.classList.add('message');
+    msg.classList.add(position);
+    messageContainer.append(msg)
+}
+
+form.addEventListener('submit',(event)=>{
+    event.preventDefault();
+    const msgVal=messageInput.value
+    appendMessage(`You : ${msgVal}`,'left')
+    socket.emit('send',msgVal);
+    messageInput.value=''
+})
+
+const username = prompt("Enter your name to join:");
+socket.emit('new-user-joined',username);
+
+
+socket.on('user-joined',name=>{
+    appendMessage(`${name} has joined the chat`,'right')
+});
+socket.on('receive',data=>{
+    appendMessage( `${data.name}:${data.message}`,'right')
+});
+socket.on('left',(name)=>{
+    appendMessage( `${name} left the chat`,'right')
+});
