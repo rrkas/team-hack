@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Compiler.css";
 
+
 export default class Compiler extends Component {
   constructor(props) {
     super(props);
@@ -111,9 +112,9 @@ export default class Compiler extends Component {
     return (
       <>
         <div className="row container-fluid">
-          <div className="col-6 ml-4 ">
-            <label htmlFor="solution ">
-              <span className="badge badge-info heading mt-2 ">
+          <div className="col-8">
+            <label htmlFor="solution">
+              <span className="badge badge-info heading mt-2">
                 <i className="fas fa-code fa-fw fa-lg"></i> Code Here
               </span>
             </label>
@@ -123,44 +124,51 @@ export default class Compiler extends Component {
               id="source"
               onChange={this.input}
               className=" source"
-              value={this.state.input}
-            ></textarea>
+              value={this.state.input}></textarea>
 
             <button
               type="submit"
-              className="btn btn-danger ml-2 mr-2 "
-              onClick={this.submit}
-            >
+              className="btn btn-danger"
+              onClick={this.submit}>
               <i className="fas fa-cog fa-fw"></i> Run
             </button>
 
-            <label htmlFor="tags" className="mr-1">
+            <label htmlFor="tags" className="">
               <b className="heading">Language:</b>
             </label>
             <select
               value={this.state.language_id}
               onChange={this.language}
               id="tags"
-              className="form-control form-inline mb-2 language"
-            >
+              className="form-control form-inline mb-2 language">
               <option value="54">C++</option>
               <option value="50">C</option>
               <option value="62">Java</option>
               <option value="71">Python</option>
             </select>
           </div>
+          <div className="col-4">
+              <h1>Right</h1>
+              <div id="video-grid"></div>
+              <div className="container"></div>
+              <div className="send">
+                <form action="#" id="send-container">
+                  <input type="text" name="messageInp" id="messageInp" />
+                  <button class="btn" type="submit">Send</button>
+                </form>
+              </div>
+          </div>
         </div>
-
         <div className="row mt-2 ml-4">
           <div className="col-3">
-            <span className="badge badge-primary heading my-2 ">
+            <span className="badge badge-primary heading my-2">
               <i className="fas fa-user fa-fw fa-md"></i> User Input
             </span>
             <br />
             <textarea id="input" onChange={this.userInput}></textarea>
           </div>
           <div className="col-3">
-            <span className="badge badge-info heading my-2 ">
+            <span className="badge badge-info heading my-2">
               <i className="fas fa-exclamation fa-fw fa-md"></i> Output
             </span>
             <br />
