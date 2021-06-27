@@ -150,11 +150,11 @@ export default class Compiler extends Component {
           <div className="col-4">
               <h1>Right</h1>
               <div id="video-grid"></div>
-              <div className="container"></div>
+              <div className="msg-container"></div>
               <div className="send">
                 <form action="#" id="send-container">
                   <input type="text" name="messageInp" id="messageInp" />
-                  <button class="btn" type="submit">Send</button>
+                  <button className="send-btn" type="submit">Send</button>
                 </form>
               </div>
           </div>
