@@ -147,14 +147,14 @@ export default class Compiler extends Component {
               <option value="71">Python</option>
             </select>
           </div>
-          <div className="col-4">
-              <h1>Right</h1>
+          <div className="col-4" >
+              <h1 id="chatheader">Chat Here !</h1>
               <div id="video-grid"></div>
               <div className="msg-container"></div>
               <div className="send">
                 <form action="#" id="send-container">
                   <input type="text" name="messageInp" id="messageInp" />
-                  <button className="send-btn" type="submit">Send</button>
+                  <button className="btn" type="submit">Send</button>
                 </form>
               </div>
           </div>
